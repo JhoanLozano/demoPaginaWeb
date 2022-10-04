@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{ /*PseudoClase  root que nos permitirá crear variables/custom propierties*/
+    --paddingContainer: 100px 0;
+    --colorTitles: #001a49;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%; /*Para que no ocupe el 100% del ancho de la página (por ejemplo el navbar)*/
+    max-width: 1200px;
+    margin: 0 auto; /*Centramos el contenido verticalmente*/
+    overflow: hidden; /*Todo lo que esté fuera del elemento se esconda*/
+    padding: var(--paddingContainer); /*Para usar la custom propiertie lo hacemos mediante var(nombreVariable)*/    
+}
+
+.hero{
+    width: 100%;/*Para que la imagen de fondo si ocupe el 100%*/
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;/*Para que un elemento se posicione relativamente a este contenedor*/
+    display: grid;
+    grid-template-rows: 100px 1fr;/*Primer fila de 100px, segunda fila toma el contenido sobrante de los 100px (1fr)*/
+    color: #FFF;
+}
+/*Clippath y position fixed
+*/
+.hero::before{ /*Creamos un subelemento a partir de hero*/
+    content: "";/*que tenga un contenido vacío*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),url('../img/desk2.jpg'); /*Ponemos una capa de transparencia a la imagen*/
+    background-size: cover;/*Para que se adapte a la página*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%); /*Código de clippy css*/
+    z-index: -1;/*Para mostrar la imagen debajo del resto del contenido*/
+    
+}
+/*Nav styles*/
+
+.nav{
+    --paddingContainer: 0;
+    height: 100%;
+    display: flex;
+    align-items: center; /*Centrar los elementos verticalmente*/
+}
+
+.navTitle{
+    font-weight: 300;/*Fuente más delgada*/
+    width: 5em;
+}
+
+.navLink{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;/*Que los elementos de la lista se pongan uno al lado del otro*/
+    grid-auto-columns: max-content;/*Que mida por defecto su máximo contenido*/
+    gap: 2em;/*Espaciado de 2 em*/
+
+}
+.navItem{
+    list-style: none;
+}
+
+
+
+.navLinks{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.navMenu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+.navMenuImg{
+    display: block;
+    width: 30px;
+    color: #FFF;
+}
+.navClose{
+    display: var(--show, none);/*Que tenga el valor de la custom propiertie pero cómo no se ha declarado estará en none*/
+}
+
+/*Hero container*/
+.heroContainer{
+    max-width: 800px;
+    display: grid;
+    --paddingContainer: 0;
+    grid-auto-rows: max-content; /*Para que las filar generadas no ocupen más de lo que deberían*/
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.heroTitle{
+    font-size: 3rem;
+}
+
+.heroParagraph{
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;/*Solo ocupa el espacio de su contenido*/
+    color: #FFF;
+    text-decoration: none;
+    padding: 16px 30px;
+    border-radius: 32px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página web</title>
+    <script src="https://kit.fontawesome.com/611dfec7f1.js" crossorigin="anonymous"></script>
+    <!-- ↑KIT de fontawesome para los iconos (ingresando con gmail) -->
+    <link rel="shortcut icon" href="img/favicon.png"> <!-- Favicon de ejemplo -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="hero"> <!-- Agregamos clase hero para darle estilos a el header -->
+        <nav class="nav container"> <!-- La clase container será para limitar el tamaño en pantalla del elemento -->
+            <div class="navLogo"> <!-- Elemento 1 del nav container (Logo) -->
+                <!-- <h2 class="navTitle">Página web</h2> Aquí se pone el logo <img> de la empresa -->
+                <img class="navTitle" src="img/JLIcon.png" alt="Página web">
+            </div>
+            <ul class="navLink navLinkMenu"><!-- Elemento 1 del nav container (Links/Enlaces) -->
+                <li class="navItem">
+                    <a href="#" class="navLinks">Inicio</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLinks">Acerca de</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLinks">Contacto</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLinks">Blog</a>
+                </li>
+
+                <a href="" class="navClose"><i class="fa-solid fa-circle-xmark"></i></a>
+            </ul>
+
+            <div class="navMenu"><!-- Elemento 1 del nav container (Menu/Img menu) -->
+                <a href="" class="navMenuImg"><i class="fa-sharp fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <section class="heroContainer container">
+            <h1 class="heroTitle">Soluciones a la medida</h1> <!-- Ejemplo de Html5 Y Css3 -->
+            <p class="heroParagraph">Texto de ejemplo de un <b>parrafo</b> principal dentro del header, aquí podemos ingresar alguna premisa o frase importante que se verá reflejada al abrir la página.</p> <!-- Alt + Z = ajustar parrafo a la vista del editor de texto -->
+            <a href="" class="cta">Comienza ahora</a>
+        </section>
+    </header>
+    <main>
+        <section class="container about">
+            <h2 class="subTitle">¿Que servicios manejamos?</h2>
+            <p class="aboutParagraph"></p>
+        </section>
+    </main>
+</body>
+</html>
