@@ -1,6 +1,5 @@
 (function(){
     const titleQuestions = [...document.querySelectorAll('.questionTitle')];
-    // console.log(titleQuestions);
     titleQuestions.forEach(question =>{
         question.addEventListener('click',()=>{
             let height = 0;
